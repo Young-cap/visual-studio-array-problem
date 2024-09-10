@@ -1,0 +1,13 @@
+// WHEN I code with visual studio,there is a unexpected problem,which cause an ansertion and I suggest it could be the usage of array.PLS GIVE ME A HAND, THANK YOU VERY MUCH.
+#include<iostream>
+#include<array>
+const int ARRAYSIZE = 100;
+using namespace std;
+int main() {
+	array<long double, ARRAYSIZE>factorials;
+	factorials[1] = factorials[0] = 1;
+	for (int i = 2;i <= ARRAYSIZE;i++)
+		factorials[i] = i * factorials[i-1];
+	for (int i = 0;i <= ARRAYSIZE;i++)
+		cout << i << "!=" << factorials[i]<<endl;
+}
